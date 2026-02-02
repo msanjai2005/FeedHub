@@ -1,0 +1,152 @@
+.create-post {
+  width: 50dvw;
+  min-height: 300px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+}
+
+.create-post textarea {
+  width: 95%;
+  min-height: 80px;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.create-post textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.post-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-actions input[type="file"] {
+  font-size: 13px;
+}
+
+.post-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.post-actions button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 600px) {
+  .create-post{
+    width: 80dvw;
+  }
+  .post-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .post-actions button {
+    width: 100%;
+  }
+}
+
+.file-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+
+  border: 1px dashed #9ca3af;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload:hover {
+  background-color: #e5e7eb;
+  border-color: #6b7280;
+}
+
+.file-upload:active {
+  transform: scale(0.96);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .file-upload {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.outlayer{
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000062;
+}
+
+.image-preview {
+  position: relative;
+  margin-top: 10px;
+}
+
+.image-preview img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-image {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #dc2626;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
