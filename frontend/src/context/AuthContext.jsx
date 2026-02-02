@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
       setAuthLoading(true);
       const res = await api.get("/auth/is-auth",{withCredentials: true});
       setUser(res?.data?.user);
+      console.log(res);
     } catch (error) {
       setUser(null);
       console.log("Error in auth check:", error);
