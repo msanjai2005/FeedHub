@@ -10,8 +10,8 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-        setAuthLoading(true);
-      const res = await api.get("/auth/is-auth");
+      setAuthLoading(true);
+      const res = await api.get("/auth/is-auth",{withCredentials: true});
       setUser(res?.data?.user);
     } catch (error) {
       setUser(null);
