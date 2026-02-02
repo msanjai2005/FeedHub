@@ -84,7 +84,7 @@ const CreatePost = ({ onPostCreated }) => {
               width: "28px",
               height: "28px",
               borderRadius: "20%",
-              backgroundColor: "#dc2626", // red
+              backgroundColor: "#dc2626",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",

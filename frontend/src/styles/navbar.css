@@ -16,7 +16,6 @@
   justify-content: space-between;
 }
 
-/* Spacer to push content below fixed navbar */
 .space {
   height: 60px;
 }
@@ -95,7 +94,6 @@
   text-decoration: underline;
 }
 
-/* ---------------- MOBILE ---------------- */
 
 @media (max-width: 600px) {
   .navbar {

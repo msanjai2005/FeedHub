@@ -18,7 +18,6 @@ const LikeButton = ({ postId, likes }) => {
     try {
       setLoading(true);
 
-      // Optimistic UI
       setLikeList((prev) =>
         hasLiked
           ? prev.filter((name) => name !== user.username)

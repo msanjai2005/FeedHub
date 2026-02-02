@@ -87,7 +87,6 @@
   border-radius: 6px;
 }
 
-/* ----------- MOBILE ----------- */
 @media (max-width: 480px) {
   .auth-card {
     padding: 20px;
@@ -99,7 +98,6 @@
   }
 }
 
-/* ----------- ANIMATION ----------- */
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -7,11 +7,9 @@
   flex-direction: column;
   gap: 22px;
 
-  /* subtle entrance */
   animation: fadeIn 0.25s ease;
 }
 
-/* Loading & empty states */
 .loading-text,
 .empty-text {
   text-align: center;
@@ -24,12 +22,10 @@
   border: 1px dashed #e5e7eb;
 }
 
-/* Optional divider feel between posts */
 .feed-container > *:not(:first-child) {
-  scroll-margin-top: 80px; /* helps when navigating */
+  scroll-margin-top: 80px;
 }
 
-/* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
   .feed-container {
     margin: 14px auto;
@@ -44,7 +40,6 @@
   }
 }
 
-/* ---------- ANIMATION ---------- */
 @keyframes fadeIn {
   from {
     opacity: 0;

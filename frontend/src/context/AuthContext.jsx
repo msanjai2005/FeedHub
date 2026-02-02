@@ -36,7 +36,6 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  // ✅ CORRECT useEffect
   useEffect(() => {
     checkAuth();
   }, []);

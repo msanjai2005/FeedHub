@@ -8,7 +8,6 @@
   gap: 8px;
 }
 
-/* Individual comment */
 .comment {
   font-size: 13px;
   line-height: 1.4;
@@ -19,14 +18,12 @@
   border-radius: 8px;
 }
 
-/* Username */
 .comment-user {
   font-weight: 600;
   color: #0f172a;
   margin-right: 6px;
 }
 
-/* Comment input area */
 .comment-input {
   margin-top: 8px;
   display: flex;
@@ -56,7 +53,6 @@
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
-/* Button */
 .comment-input button {
   padding: 8px 14px;
   font-size: 13px;

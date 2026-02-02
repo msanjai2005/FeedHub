@@ -1,11 +1,10 @@
 import React from 'react';
-import { FaPlus } from 'react-icons/fa'; // or any other plus icon from react-icons
-
+import { FaPlus } from 'react-icons/fa';
 const BlueCirclePlus = ({ 
   size = 60, 
   color = '#0062ff', 
   iconColor = 'white',
-  iconSize, // Optional: override icon size
+  iconSize,
   className = '',
   onClick
 }) => {
@@ -27,7 +26,6 @@ const BlueCirclePlus = ({
     }
   };
 
-  // Calculate icon size if not provided
   const calculatedIconSize = iconSize || size * 0.4;
 
   return (

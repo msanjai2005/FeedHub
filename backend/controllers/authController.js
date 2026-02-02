@@ -18,7 +18,6 @@ export const signup = async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
-    /* Basic validation */
     if (!username || !email || !password) {
       return res.status(400).json({
         success: false,
@@ -33,7 +32,6 @@ export const signup = async (req, res) => {
       });
     }
 
-    /* Check existing user */
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(409).json({
@@ -42,11 +40,9 @@ export const signup = async (req, res) => {
       });
     }
 
-    /* Hash password */
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    /* Create user */
     const user = await User.create({
       username,
       email,
@@ -56,12 +52,13 @@ export const signup = async (req, res) => {
     /* Generate token */
     const token = generateToken(user._id);
 
-    /* Set cookie */
+    const isProd = process.env.NODE_ENV === "production";
+
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      secure: isProd,
+      sameSite: isProd ? "none" : "lax",
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
     return res.status(201).json({
@@ -90,7 +87,6 @@ export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    /* Validation */
     if (!email || !password) {
       return res.status(400).json({
         success: false,
@@ -98,7 +94,6 @@ export const login = async (req, res) => {
       });
     }
 
-    /* Find user */
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(401).json({

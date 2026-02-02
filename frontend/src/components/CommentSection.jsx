@@ -21,7 +21,6 @@ const CommentSection = ({ postId, comments }) => {
     try {
       setLoading(true);
 
-      // Optimistic update
       setCommentList((prev) => [...prev, newComment]);
       setText("");
 

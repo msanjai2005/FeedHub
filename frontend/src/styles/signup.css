@@ -1,5 +1,5 @@
 .auth-container {
-  min-height: calc(100vh - 60px); /* minus navbar */
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,6 @@
   text-align: center;
 }
 
-/* ----------- MOBILE ----------- */
 @media (max-width: 480px) {
   .auth-card {
     padding: 18px;

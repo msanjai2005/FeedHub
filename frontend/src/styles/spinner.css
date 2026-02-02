@@ -1,5 +1,5 @@
 .spinner-container {
-  min-height: calc(100vh - 60px); /* minus navbar */
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .spinner {
     width: 34px;
